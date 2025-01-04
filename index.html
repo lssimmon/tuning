@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tuning App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="#">Tuning App</a> <!-- Site name or logo -->
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Tuning</a></li>
+        </ul>
+        <div class="account-icon">
+            <img src="account-icon.png" alt="Account" id="accountIcon" onclick="toggleAccountMenu()">
+            <div id="accountMenu" class="account-menu">
+                <a href="#">Login</a>
+                <a href="#">Register</a>
+                <a href="#">Profile</a>
+                <a href="#">Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Instrument Tuning App</h1>
+        <button id="startButton">Start Tuning</button>
+        <div id="pitchDisplay">
+            <p>Detected Pitch: <span id="detectedPitch">None</span></p>
+            <p id="tuningStatus">Status: <span id="status">Please start tuning</span></p>
+        </div>
+         <!-- New section for note input -->
+         <div id="noteInputSection">
+            <label for="noteInput">Enter a Note (e.g., C4, G#4): </label>
+            <input type="text" id="noteInput" placeholder="Enter a note">
+            <button id="showNoteButton">Show Note on Staff</button>
+        </div>
+
+        <canvas id="staffCanvas" width="600" height="200"></canvas> <!-- Canvas for musical staff -->
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
